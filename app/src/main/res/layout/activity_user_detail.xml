@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".model.UserDetailActivity">
+    tools:context=".UserDetailActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/userDetail_toolbar"
@@ -12,19 +12,23 @@
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
+        android:theme="@style/ToolbarColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
-        app:title="User Details" />
+        app:title="User Details"
+        app:titleTextColor="@android:color/white" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:adjustViewBounds="true"
+        android:background="@drawable/shape_circle"
+        android:cropToPadding="true"
+        android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/userDetail_toolbar"
@@ -36,21 +40,35 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Fullname"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
         app:layout_constraintEnd_toEndOf="@+id/imageView2"
         app:layout_constraintStart_toStartOf="@+id/imageView2"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userDetail_textView_fullname" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:text="Age"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userDetail_textView_fullname" />
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
 
     <TextView
         android:id="@+id/userDetail_textView_age"
@@ -66,8 +84,9 @@
         android:id="@+id/textView4"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:text="Address"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
         app:layout_constraintEnd_toEndOf="@+id/userDetail_textView_age"
         app:layout_constraintStart_toStartOf="@+id/userDetail_textView_age"
         app:layout_constraintTop_toBottomOf="@+id/userDetail_textView_age" />
@@ -84,9 +103,13 @@
 
     <ImageButton
         android:id="@+id/userDetail_imageButton_edit"
-        android:layout_width="wrap_content"
+        android:layout_width="48dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/shape_button"
+        android:backgroundTint="@color/blue_light"
+        android:tint="@android:color/black"
         app:layout_constraintBottom_toBottomOf="@+id/userDetail_imageButton_delete"
         app:layout_constraintEnd_toStartOf="@+id/userDetail_imageButton_delete"
         app:layout_constraintHorizontal_bias="1.0"
@@ -96,10 +119,14 @@
 
     <ImageButton
         android:id="@+id/userDetail_imageButton_delete"
-        android:layout_width="wrap_content"
+        android:layout_width="48dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/shape_button"
+        android:backgroundTint="@color/blue_light"
+        android:tint="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/userDetail_textView_address"

@@ -16,7 +16,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="List of Users" />
+        app:title="List of Users"
+        app:titleTextColor="@android:color/white" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/main_recyclerView_userList"

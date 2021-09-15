@@ -3,9 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Bryan/Document/GitHub/UserListApplication/app/src/main/res/drawable/ic_launcher_user_list_foreground.xml" value="0.3828125" />
+        <entry key="..\:/Bryan/Document/GitHub/UserListApplication/app/src/main/res/drawable/shape_button.xml" value="0.37864583333333335" />
+        <entry key="..\:/Bryan/Document/GitHub/UserListApplication/app/src/main/res/drawable/shape_circle.xml" value="0.37864583333333335" />
         <entry key="..\:/Bryan/Document/GitHub/UserListApplication/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Bryan/Document/GitHub/UserListApplication/app/src/main/res/layout/activity_user_detail.xml" value="0.36666666666666664" />
         <entry key="..\:/Bryan/Document/GitHub/UserListApplication/app/src/main/res/layout/activity_user_entry.xml" value="0.36666666666666664" />
+        <entry key="..\:/Bryan/Document/GitHub/UserListApplication/app/src/main/res/layout/card_user.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>

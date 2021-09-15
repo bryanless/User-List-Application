@@ -12,12 +12,13 @@
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
+        android:theme="@style/ToolbarColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
-        app:title="User Entry" />
+        app:title="User Entry"
+        app:titleTextColor="@android:color/white" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/userEntry_TIL_fullname"
