@@ -57,10 +57,7 @@ public class UserDetailActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getBaseContext(), UserEntryActivity.class);
                 intent.putExtra("action", "edit");
-//                intent.putExtra("position", position);
                 intent.putExtra("user", user);
-
-//                setResult(2, intent);
 
                 activityResultLauncher.launch(intent);
             }
@@ -107,7 +104,6 @@ public class UserDetailActivity extends AppCompatActivity {
                         // Result code
                         // 2 = Edit user success
                         if (result.getResultCode() == 2) {
-//                            int position = result.getData().getIntExtra("position", -1);
                             User user = result.getData().getParcelableExtra("user");
 
                             Intent intent = new Intent();
