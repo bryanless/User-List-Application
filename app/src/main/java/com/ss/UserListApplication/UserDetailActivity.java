@@ -1,10 +1,9 @@
-package com.ss.week1_0706012010002.model;
+package com.ss.UserListApplication;
 
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -13,14 +12,13 @@ import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.ss.week1_0706012010002.R;
-import com.ss.week1_0706012010002.UserEntryActivity;
+import com.ss.UserListApplication.R;
+import com.ss.UserListApplication.model.User;
 
 public class UserDetailActivity extends AppCompatActivity {
 
@@ -49,6 +47,7 @@ public class UserDetailActivity extends AppCompatActivity {
         userDetail_toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                setResult(Activity.RESULT_CANCELED);
                 finish();
             }
         });
@@ -58,10 +57,10 @@ public class UserDetailActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getBaseContext(), UserEntryActivity.class);
                 intent.putExtra("action", "edit");
-                intent.putExtra("position", position);
+//                intent.putExtra("position", position);
                 intent.putExtra("user", user);
 
-                setResult(2, intent);
+//                setResult(2, intent);
 
                 activityResultLauncher.launch(intent);
             }
@@ -108,7 +107,7 @@ public class UserDetailActivity extends AppCompatActivity {
                         // Result code
                         // 2 = Edit user success
                         if (result.getResultCode() == 2) {
-                            int position = result.getData().getIntExtra("position", -1);
+//                            int position = result.getData().getIntExtra("position", -1);
                             User user = result.getData().getParcelableExtra("user");
 
                             Intent intent = new Intent();

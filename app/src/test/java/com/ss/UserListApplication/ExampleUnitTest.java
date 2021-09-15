@@ -1,4 +1,4 @@
-package com.ss.week1_0706012010002;
+package com.ss.UserListApplication;
 
 import org.junit.Test;
 

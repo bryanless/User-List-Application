@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ss.week1_0706012010002">
+    package="com.ss.UserListApplication">
 
     <application
         android:allowBackup="true"
@@ -9,9 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Week1_0706012010002">
-        <activity android:name=".model.UserDetailActivity"></activity>
-        <activity android:name=".UserEntryActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name="com.ss.UserListApplication.UserDetailActivity"></activity>
+        <activity android:name="com.ss.UserListApplication.UserEntryActivity" />
+        <activity android:name="com.ss.UserListApplication.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,4 +1,4 @@
-package com.ss.week1_0706012010002.adapter;
+package com.ss.UserListApplication.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,9 +8,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.ss.week1_0706012010002.R;
-import com.ss.week1_0706012010002.model.OnCardClickListener;
-import com.ss.week1_0706012010002.model.User;
+import com.ss.UserListApplication.R;
+import com.ss.UserListApplication.model.OnCardClickListener;
+import com.ss.UserListApplication.model.User;
 
 import java.util.ArrayList;
 

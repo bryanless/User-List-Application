@@ -1,4 +1,4 @@
-package com.ss.week1_0706012010002;
+package com.ss.UserListApplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
-import com.ss.week1_0706012010002.model.User;
+import com.ss.UserListApplication.model.User;
 
 public class UserEntryActivity extends AppCompatActivity {
 
@@ -22,7 +22,7 @@ public class UserEntryActivity extends AppCompatActivity {
     private Button userEntry_button_save;
 
     private String action;
-    private int position;
+//    private int position;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +38,7 @@ public class UserEntryActivity extends AppCompatActivity {
         userEntry_toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                setResult(Activity.RESULT_CANCELED);
                 finish();
             }
         });
@@ -62,7 +63,7 @@ public class UserEntryActivity extends AppCompatActivity {
                     finish();
                 } else if (action.equalsIgnoreCase("edit")) {
                     Intent intent = new Intent();
-                    intent.putExtra("position", position);
+//                    intent.putExtra("position", position);
                     intent.putExtra("user", user);
 
                     setResult(2, intent);
@@ -78,7 +79,7 @@ public class UserEntryActivity extends AppCompatActivity {
     private void setValue() {
         Intent intent = getIntent();
         action = intent.getStringExtra("action");
-        position = intent.getIntExtra("position", -1);
+//        position = intent.getIntExtra("position", -1);
         User user = intent.getParcelableExtra("user");
 
         if (action.equalsIgnoreCase("add")) {

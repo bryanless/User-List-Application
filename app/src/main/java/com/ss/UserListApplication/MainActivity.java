@@ -1,26 +1,22 @@
-package com.ss.week1_0706012010002;
+package com.ss.UserListApplication;
 
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.ss.week1_0706012010002.adapter.UserRVAdapter;
-import com.ss.week1_0706012010002.model.OnCardClickListener;
-import com.ss.week1_0706012010002.model.User;
-import com.ss.week1_0706012010002.model.UserDetailActivity;
+import com.ss.UserListApplication.adapter.UserRVAdapter;
+import com.ss.UserListApplication.model.OnCardClickListener;
+import com.ss.UserListApplication.model.User;
 
 import java.util.ArrayList;
 
@@ -77,7 +73,7 @@ public class MainActivity extends AppCompatActivity implements OnCardClickListen
                         // Result code
                         // 1 = New user success
                         // 2 = Edit user success
-                        // 0 = Delete user success
+                        // 3 = Delete user success
                         if (result.getResultCode() == 1) {
                             User newUser = result.getData().getParcelableExtra("user");
                             userList.add(newUser);
